@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+ 
+{% block title %}PREDICTION{% endblock title %}
+
+{% block body %}
+<body style="background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+<div class="container py-4">
+
+  <div class="p-5 mb-4 bg-dark text-white rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class ="mx-auto">Enter Below information  </h1>
+      <center>
+        <form method="POST" action = "/predicted" >
+           <input type="hidden" name="csrfmiddlewaretoken" value="zlLoMM3SydNe5iEoKvlKZvGfUfWTb5Wf5teA6nhBlLUn2fM3axa7rXWFJbqFQ0zg">
+           
+           <div class="form-group">
+               <div class="row">
+                 <div class="col">
+                   <div class="form-group">
+                     <label for="Age">Enter Age </label>
+                     <input class="form-control" type="number" name="Age" placeholder="60" min="1" max="80" required="">
+             
+                   </div><br>
+                   </div>
+   
+                   <div class="col">   
+                   
+                     <label>Male or Fimale ?</label><br>
+                     <select class="form-control" name="gender" required="required">
+                       <option value="Male">Male</option>
+                       <option value="Female">Female</option>
+                     </select>
+                 </div>
+               </div>
+               <br>
+               <div class="row">
+                   <div class="col">
+                     <label>Chest pain type?</label><br>
+                     <select class="form-control" name="chestpaintype" id="chest" required="required">
+                       <option value="ASY">ASY</option>
+                       <option value="NAP">NAP</option>
+                       <option value="ATA">ATA</option>
+                       <option value="TA">TA</option>
+                     </select>
+                     </div>
+                      
+                     
+                     
+                     <div class="col">   
+                     
+                       <label>fasting blood sugar </label>
+                       <input class="form-control" name="FastingBS" type="number" required="required" min="0" max="1">
+            
+                     </div>
+ 
+                     <div class="col">
+                       <label>maximum heart rate? </label>
+                       <input class="form-control" id="eight" name="mhr" type="number" required="required" min="60" max="203">
+                     </div>
+                 </div>            
+               <br>
+ 
+ 
+               <div class="row">   
+                     <div class="col">   
+                       <label>resting ecg?</label><br><select class="form-control" name="RestingECG" id="ecg" required="required">
+                         <option value="Normal">Normal</option>
+                         <option value="LVH">LVH</option>
+                         <option value="ST">ST</option>
+                       </select>
+                    </div>
+ 
+ 
+                    <div class="col">   
+                      <label>serum cholesterol [mm/dl] </label>
+                     <input class="form-control" name="Cholesterol" type="number" required="required" min="0" max="603">
+                  </div>
+
+                  <div class="col">   
+                    <label>Resting bp </label>
+                   <input class="form-control" name="RestingBP" type="number" required="required" min="0" max="200">
+                </div>
+               </div>            
+               <br>
+               
+               <div class="row">   
+                 <div class="col">   
+                   
+                     <label>ExerciseAngina?</label><br>
+                     <select class="form-control" name="excer " id="ecg" required="required">
+                       <option value="N">No</option>
+                       <option value="Y">Yes</option>
+                     </select>
+                 </div>
+ 
+ 
+                 <div class="col">    
+                   <label>ST depression induced by exercise relative to rest </label>
+                   <input class="form-control" name="Oldpeak" type="number" required="required" min="0.8" max="6.2" step ="0.1">
+                 </div>
+                 <div class="col">
+                    <label>slop of st</label><br>
+                    <select class="form-control" name="ST_Slope" id="ST_Slope" required="required">
+                     <option value="'Flat">Flat</option>
+                     <option value="Up">Up</option>
+                     <option value="Down">Down</option>
+                   </select>
+                 </div>
+             </div>            
+             <br>
+             <div class="mx-auto" style="width: 200px;">
+               <div class="row">
+                 <br>
+                 <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+               </div>    
+        
+         <br>
+      </div></form></center>
+    </div>
+  </div>
+</div> 
+</body>
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+<body style="background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+  <div class="container my-5 text-white bg-dark">
+    <div class="row p-4 pb-pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+     
+      {% if hd == 0 %}
+        <div class ="row">
+         <div class ="col-auto">
+            <img class="align-items-left" src="https://freepngimg.com/thumb/emoji/47416-2-smiley-image-free-png-hq.png" width="120" height="120">         </div>
+         <div class ="col">
+           <h1 class = "text-success"> The patient is Normal <h1>
+         </div>
+        </div>
+      {% else %}
+      <div class ="row">
+       <div class ="col-auto">
+         <img class="align-items-left" src="https://freepngimg.com/thumb/sad_emoji/36875-1-sad-emoji-hd.png"  width="120" height="120">       </div>     
+       <div class ="col">   
+         <h1 class = "text-danger"> The patient have Chances to heart Failure <h1>
+        
+       </div>
+      </div>  
+      {% endif %}
+            
+
+   </div>
+  </div>
+
+</body>
+
+{% endblock body %}
