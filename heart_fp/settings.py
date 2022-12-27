@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-)g5sfg7(&^fs28migj1f70qsws6!aiunyifa88nqwc&noo3q=0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["heart-failure-prediction-production.up.railway.app"]
+ALLOWED_HOSTS = ['heart-failure-prediction-production.up.railway.app']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "heart_fp",
 ]
 
 MIDDLEWARE = [
