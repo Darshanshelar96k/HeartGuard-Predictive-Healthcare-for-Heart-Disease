@@ -1,1 +1,1 @@
-web: gunicorn 'heart_fp.wsgi'
+web: python manage.py migrate && gunicorn heart_fp.wsgi
