@@ -14,16 +14,15 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
       <h1 class ="mx-auto">Enter Below information  </h1>
       <center>
         <form method="POST" action = "/predicted" >
-           <input type="hidden" name="csrfmiddlewaretoken" value="zlLoMM3SydNe5iEoKvlKZvGfUfWTb5Wf5teA6nhBlLUn2fM3axa7rXWFJbqFQ0zg">
-           
+         {% csrf_token %}           
            <div class="form-group">
                <div class="row">
-                 <div class="col">
-                   <div class="form-group">
+                   <div class="col">
+                    <div class="form-group">
                      <label for="Age">Enter Age </label>
                      <input class="form-control" type="number" name="Age" placeholder="60" min="1" max="80" required="">
              
-                   </div><br>
+                     </div><br>
                    </div>
    
                    <div class="col">   
@@ -33,10 +32,10 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
                        <option value="Male">Male</option>
                        <option value="Female">Female</option>
                      </select>
+                   </div>
                  </div>
-               </div>
                <br>
-               <div class="row">
+                <div class="row">
                    <div class="col">
                      <label>Chest pain type?</label><br>
                      <select class="form-control" name="chestpaintype" id="chest" required="required">
@@ -45,26 +44,23 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
                        <option value="ATA">ATA</option>
                        <option value="TA">TA</option>
                      </select>
-                     </div>
-                      
-                     
-                     
-                     <div class="col">   
+                    </div>
+                    <div class="col">   
                      
                        <label>fasting blood sugar </label>
                        <input class="form-control" name="FastingBS" type="number" required="required" min="0" max="1">
             
-                     </div>
+                    </div>
  
-                     <div class="col">
+                    <div class="col">
                        <label>maximum heart rate? </label>
                        <input class="form-control" id="eight" name="mhr" type="number" required="required" min="60" max="203">
-                     </div>
+                    </div>
                  </div>            
-               <br>
+                 <br>
  
  
-               <div class="row">   
+                 <div class="row">   
                      <div class="col">   
                        <label>resting ecg?</label><br><select class="form-control" name="RestingECG" id="ecg" required="required">
                          <option value="Normal">Normal</option>
@@ -76,13 +72,13 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
  
                     <div class="col">   
                       <label>serum cholesterol [mm/dl] </label>
-                     <input class="form-control" name="Cholesterol" type="number" required="required" min="0" max="603">
-                  </div>
+                      <input class="form-control" name="Cholesterol" type="number" required="required" min="0" max="603">
+                    </div>
 
-                  <div class="col">   
-                    <label>Resting bp </label>
-                   <input class="form-control" name="RestingBP" type="number" required="required" min="0" max="200">
-                </div>
+                    <div class="col">   
+                     <label>Resting bp </label>
+                     <input class="form-control" name="RestingBP" type="number" required="required" min="0" max="200">
+                    </div>
                </div>            
                <br>
                
@@ -116,10 +112,12 @@ background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, 
                  <br>
                  <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-               </div>    
+             </div>    
         
-         <br>
-      </div></form></center>
+           <br>
+           </div>
+        </form>
+     </center>
     </div>
   </div>
 </div> 

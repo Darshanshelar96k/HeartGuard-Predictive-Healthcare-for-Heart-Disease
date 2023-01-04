@@ -11,8 +11,8 @@ import pickle
       
 def load_model():
     with open('heart_.pkl', 'rb') as file:
-     data2 = pickle.load(file)
-     return data2
+     data = pickle.load(file)
+     return data
 data2 = load_model()
 model2 = data2["model"]
 le_sex = data2["le_sex"]
@@ -61,30 +61,4 @@ def about(request):
 
 
 
-
-
-
-# def heartpredict(request):
-#   print (request.POST.dict())
-#   age =int(request.POST.get('Age', False))
-#   sex =request.POST.get('gender', False)
-#   chest =request.POST.get('chestpaintype', False)
-#   rbp =int(request.POST.get('RestingBP', False))
-#   col =int(request.POST.get('Cholesterol', False))
-#   fast =int(request.POST.get('FastingBS', False))
-#   recg =request.POST.get('RestingECG', False)
-#   maxhr =int(request.POST.get('mhr',False))
-#   excer =request.POST.get('excer', False)
-#   old =float(request.POST.get('Oldpeak', False))
-#   slop =request.POST.get('ST_Slope', False)
-#   input_data= np.array([[age,sex,chest,rbp,col,fast,recg,maxhr,excer,old,slop]])
-#   input_ =input_data
-#   input_[:,1] = le_sex.fit_transform(input_data[:,1])
-#   input_[:,2] = le_chest.fit_transform(input_data[:,2])
-#   input_[:,6] = le_ecg.fit_transform(input_data[:,6])
-#   input_[:,8] = le_ex.fit_transform(input_data[:,8])
-#   input_[:,10] = le_slop.fit_transform(input_data[:,10])
-#   HeartDisease=model2.predict(input_)
-#   return HttpResponse(HeartDisease)
-  
 
