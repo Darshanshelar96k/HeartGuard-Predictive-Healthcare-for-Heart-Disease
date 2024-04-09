@@ -1,27 +1,38 @@
-# HeartGuard: Heart Disease Prediction
+# HeartGuard: Heart Failure Prediction
 
-## About Dataset
-Cardiovascular diseases (CVDs) are the leading cause of mortality worldwide, responsible for a significant number of premature deaths. Heart failure, often a consequence of CVDs, can be effectively managed with early detection and treatment. This dataset contains 11 features that can be utilized to predict the likelihood of heart disease, aiding in early intervention and management.
+This project aims to predict the likelihood of heart failure in patients using machine learning techniques. Leveraging a dataset containing various medical features such as age, gender, blood pressure, cholesterol levels, and more, the aim is to develop an accurate predictive model that can identify individuals at risk of heart failure.
 
-## Attribute Information
-- **Age**: Age of the patient [years]
-- **Sex**: Sex of the patient [M: Male, F: Female]
-- **ChestPainType**: Chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic]
-- **RestingBP**: Resting blood pressure [mm Hg]
-- **Cholesterol**: Serum cholesterol [mm/dl]
-- **FastingBS**: Fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
-- **RestingECG**: Resting electrocardiogram results [Normal: Normal, ST: ST-T wave abnormality, LVH: Left ventricular hypertrophy]
-- **MaxHR**: Maximum heart rate achieved [Numeric value between 60 and 202]
-- **ExerciseAngina**: Exercise-induced angina [Y: Yes, N: No]
-- **Oldpeak**: ST depression induced by exercise [Numeric value]
-- **ST_Slope**: Slope of the peak exercise ST segment [Up: Upsloping, Flat: Flat, Down: Downsloping]
-- **HeartDisease**: Output class [1: Heart disease, 0: Normal]
+## Table of Contents
+1. [Overview](#overview)
+2. [Dataset](#dataset)
+3. [Data Preprocessing](#data-preprocessing)
+4. [Machine Learning Model](#machine-learning-model)
+5. [Deployment](#deployment)
+6. [Conclusion](#conclusion)
 
-## Context
-Early detection and management of cardiovascular diseases are crucial for reducing mortality rates. This dataset combines information from multiple heart disease datasets, resulting in a comprehensive dataset suitable for research purposes. By leveraging machine learning algorithms on this dataset, predictive models can assist healthcare professionals in identifying individuals at risk of heart disease.
+## Overview <a name="overview"></a>
+Heart failure is a critical medical condition that requires timely diagnosis and intervention. This project aims to assist healthcare professionals in identifying individuals who are at higher risk of heart failure. By utilizing machine learning algorithms, early detection can be achieved, leading to better patient outcomes.
 
-## Source
-The dataset is created by combining five heart disease datasets from the UCI Machine Learning Repository, including observations from the Cleveland, Hungarian, Switzerland, Long Beach VA, and Stalog datasets. It comprises 918 observations after removing duplicates and serves as the largest combined heart disease dataset available for research purposes.
+## Dataset <a name="dataset"></a>
+The dataset used for this project comprises medical data from patients, including features such as age, gender, blood pressure, cholesterol levels, presence of diabetes, smoking habits, and more. It is collected from hospitals and medical research institutions and contains both numerical and categorical variables.
 
-[UCI Machine Learning Repository - Heart Disease Datasets](https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/)
+### Dataset Information
+- **Source**: The dataset is created by combining five heart disease datasets from the UCI Machine Learning Repository, including observations from the Cleveland, Hungarian, Switzerland, Long Beach VA, and Stalog datasets. It comprises 918 observations after removing duplicates and serves as the largest combined heart disease dataset available for research purposes.
+- **Total Observations**: 918
+- **Features**: Age, Sex, ChestPainType, RestingBP, Cholesterol, FastingBS, RestingECG, MaxHR, ExerciseAngina, Oldpeak, ST_Slope
+- **Target**: HeartDisease (Output class [1: Heart disease, 0: Normal])
 
+### Use Case
+Healthcare professionals can utilize this dataset and predictive model to assess the risk of heart failure in patients during routine check-ups or when evaluating symptoms related to cardiovascular health. Early identification of individuals at higher risk of heart failure enables proactive interventions, such as lifestyle modifications, medication management, or referral to a specialist for further evaluation.
+
+## Data Preprocessing <a name="data-preprocessing"></a>
+Before training the machine learning model, the dataset undergoes preprocessing steps such as handling missing values, encoding categorical variables, scaling numerical features, and addressing outliers. Additionally, feature engineering techniques may be applied to extract more meaningful information from the data.
+
+## Machine Learning Model <a name="machine-learning-model"></a>
+Various classification algorithms are explored and compared to develop an effective heart failure prediction model. Commonly used techniques such as Logistic Regression, Random Forest Classifier, Support Vector Machines, and Gradient Boosting Classifier are considered. Hyperparameter tuning is performed to optimize the performance of the selected model.
+
+## Deployment <a name="deployment"></a>
+The project is deployed using a web-based interface where users can input their medical information, and the predictive model will assess their risk of heart failure. This interface can be accessed through a web browser, allowing healthcare professionals and individuals to utilize the prediction functionality easily.
+
+## Conclusion <a name="conclusion"></a>
+HeartGuard aims to provide valuable assistance in the early detection of heart failure, thereby enabling timely medical interventions and improving patient outcomes. By leveraging machine learning techniques and medical data, this project contributes to the advancement of predictive healthcare and the prevention of cardiovascular diseases.
